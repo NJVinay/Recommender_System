@@ -1,2 +1,2 @@
 # HDLC_TECHNOLOGIES_AI_ML_PROJECT
-#Data Science and Machine Learning Applied Project for Training Predictive Models through Dataset Analysis.
+#This repository hosts an applied Data Science and Machine Learning Project focused on Training Predictive Models through comprehensive Dataset Analysis.
