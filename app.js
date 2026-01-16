@@ -40,11 +40,18 @@ function renderRecommendations() {
   const ranked = (filtered.length ? filtered : source).slice(0, 5);
 
   results.innerHTML = "";
+  if (!ranked.length) {
+    setStatus("No recommendations found.");
+    return;
+  }
   ranked.forEach((movie) => {
     const li = document.createElement("li");
     li.textContent = movie.title;
     const span = document.createElement("span");
-    span.textContent = movie.genre.toUpperCase();
+    const primaryGenre = movie.genres && movie.genres.length
+      ? movie.genres[0]
+      : "n/a";
+    span.textContent = primaryGenre.toUpperCase();
     li.appendChild(span);
     results.appendChild(li);
   });
