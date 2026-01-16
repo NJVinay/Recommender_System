@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Recommender System</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__badge">Personal Project</div>
+        <h1>Movie Recommender</h1>
+        <p>
+          A fast, lightweight demo that turns moods into watchlists. Pick a
+          genre, tweak the vibe, and get instant picks.
+        </p>
+      </header>
+
+      <section class="panel">
+        <div class="panel__left">
+          <h2>Find Your Next Watch</h2>
+          <label class="label" for="genre">Genre</label>
+          <select id="genre" class="input">
+            <option value="all">All</option>
+          </select>
+
+          <label class="label" for="mood">Mood</label>
+          <div class="mood">
+            <input id="mood" type="range" min="1" max="5" value="3" />
+            <div class="mood__labels">
+              <span>Chill</span>
+              <span>Hype</span>
+            </div>
+          </div>
+
+          <label class="label" for="search">Keyword</label>
+          <input
+            id="search"
+            class="input"
+            type="text"
+            placeholder="e.g. heist, space, coming-of-age"
+            maxlength="40"
+          />
+
+          <button id="recommend" class="button">Recommend</button>
+        </div>
+
+        <div class="panel__right">
+          <div class="panel__accent"></div>
+          <h3>Top Picks</h3>
+          <ul id="results" class="results"></ul>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h4>Fast</h4>
+          <p>Static, zero-backend UI. Perfect for Netlify deploys.</p>
+        </article>
+        <article class="card">
+          <h4>Focused</h4>
+          <p>Simple logic you can swap with real model output later.</p>
+        </article>
+        <article class="card">
+          <h4>Flexible</h4>
+          <p>Clean layout, bold type, and easy theming.</p>
+        </article>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

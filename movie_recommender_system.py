@@ -1,5 +1,5 @@
 import pandas as pd
-data_set = pd.read_csv('C:\Users\NARAM RAMBABU\Desktop\movies.csv')
+data_set = pd.read_csv("movies.csv")
 print(data_set)
 
 from sklearn.feature_extraction.text import TfidfVectorizer
